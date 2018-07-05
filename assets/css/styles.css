@@ -1,0 +1,296 @@
+/*-------------
+    Variables
+--------------*/
+:root {
+    --color-texto: rgb(0, 0, 0);
+    --color-decorativo: rgb(230, 162, 36);
+    --color-resaltado: #555;
+}
+
+
+/*-------------
+ 	General
+-------------*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	font: normal 16px sans-serif;
+	color:var(--color-texto);
+}
+
+ul, nav{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+
+	opacity: 1;
+}
+
+a:hover{
+    color: var(--color-decorativo);
+	opacity: 2;
+}
+
+a.btn{
+	color: #fff;
+	border-radius: 4px;
+	text-transform: uppercase;
+	background-color: #2196F3;
+	font-weight: 800;
+	text-align: center;
+}
+
+hr{
+	width: 100%;
+	height: 2px;
+	background-color: var(--color-decorativo);
+	border: 0;
+    margin-bottom: 2rem;
+    margin-top:2rem;
+}
+
+section{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+
+	padding: 3rem 2.5rem;
+
+}
+
+@media (max-width: 1000px){
+
+	section{
+		padding: 100px 50px;
+	}
+
+}
+
+@media (max-width: 600px){
+
+	section{
+		padding: 60px 20px;
+	}
+	
+
+}
+
+section h3.section-title{
+	color: var(--color-texto);
+	text-transform: capitalize; 
+	font: bold 1.8rem 'Quick Sands', sans-serif;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+section p{
+	max-width: 800px;
+	margin-bottom: 25px;
+	padding: 0;
+    line-height: 1.5;
+    font-family:'Quicksands', sans-serif;
+    font-size:1rem
+}
+
+@media (max-width: 600px){
+
+	section p{
+		font-size:12px;
+	}
+	
+
+}
+
+/*-------------
+ 	Header
+-------------*/
+
+header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	padding: 1.5rem 100px 0;
+}
+
+header h2{
+	font-family: 'Roboto', sans-serif;
+}
+
+header nav ul{
+	display: flex;
+}
+
+header nav ul li{
+	margin: 0 15px;
+}
+
+header nav ul li:first-child{
+	margin-left: 0;	
+}
+
+header nav ul li:last-child{
+	margin-right: 0;	
+}
+
+
+
+@media (max-width: 1000px){
+	header{
+		padding: 20px 50px;
+	}
+}
+
+
+@media (max-width: 700px){
+	header{
+		flex-direction: column;		
+	}
+
+	header h2{
+		margin-bottom: 15px;
+    }
+    header nav ul li{
+        margin: 0 5px;
+        font-size:12px;
+    }
+}
+
+/*----------------
+ 	Portada Section
+----------------*/
+
+.cabecera{
+	position: relative;
+	justify-content: center;
+	min-height: 100vh;
+    text-align: center;
+}
+
+.cabecera .background-image{
+    background-image: url(../img/portfolio_header.jpg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+}
+
+.cabecera .background-image:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #081f12;
+	opacity: 0.7;
+}
+
+.cabecera h1{
+	font: bold 3rem 'Roboto', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 800px){
+
+	.cabecera{
+		min-height: 600px;
+	}
+
+	.cabecera h1{
+		font-size: 48px;
+	}
+
+}
+
+/*--------------------
+ 	Quien Soy Section
+---------------------*/
+
+.quien_soy{
+	background-color: #fff;
+}
+
+.quien_soy p{
+    text-align: left;
+    
+}
+
+
+
+figure img{
+/* cambia estos dos valores para definir el tamaño de tu círculo */
+height: 190px;
+width: 200px;
+/* los siguientes valores son independientes del tamaño del círculo */
+background-repeat: no-repeat;
+background-position: 50%;
+border-radius: 50%;
+background-size: 100% auto;
+/*margin: 0 auto;*/
+display: block;
+margin-left:0rem;
+}
+
+
+/* Mostly Fluid */
+.container {
+  display: -ms-flex;
+	display: -webkit-flex;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+ /* -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;*/
+}
+
+
+
+.acercade, .detalles, 
+{
+  width: 50%;
+  padding: 10px;
+}
+
+.container {
+    width: 800px;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media all and (max-width: 500px) {
+    .container { 
+        flex-direction: column;
+        -webkit-flex-direction: column; 
+		-ms-flexd-direction:column;
+		align-items:flex-start;
+		}
+	.acercade {
+		width:35%;
+	}
+}
+}
+
+
+
