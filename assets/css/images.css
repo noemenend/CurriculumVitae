@@ -19,7 +19,11 @@
 }
 
 .ch-info {
-    position: absolute;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
     /*background: rgba(63, 147, 147, 0.8);*/
     background: rgb(236, 186, 93, 0.8);
     opacity: 0.8;
@@ -68,10 +72,6 @@
     opacity: 1;
 }
 
-.ch-info p a:hover {
-    color: #fff222;
-    color: rgba(255, 242, 34, 0.8);
-}
 
 .ch-info p {
     color: #fff;
@@ -115,3 +115,7 @@ ch-info p {
     padding-top: 4px;
     font-family: 'Open Sans', Arial, sans-serif;
 }
+
+
+
+

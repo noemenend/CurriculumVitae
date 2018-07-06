@@ -3,7 +3,6 @@
 --------------*/
 
 :root {
-    --color-texto: rgb(0, 0, 0);
     --color-decorativo: rgb(230, 162, 36);
     --color-resaltado: #555;
 }
@@ -87,7 +86,7 @@ section {
 
 section h3.section-title {
     color: var(--color-texto);
-    text-transform: capitalize;
+    text-transform: none;
     font: bold 1.8rem 'Quick Sands', sans-serif;
     margin-bottom: 2rem;
     text-align: left;
@@ -99,6 +98,19 @@ section p {
     padding: 0;
     line-height: 1.5;
     font-size: 1.2rem
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* ICONOS */
+/* ------------------------------------------------------------------------------------------ */
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: 120%;
+    line-height: 120%;
+    vertical-align: baseline;
+    margin-right: 10px;
 }
 
 
@@ -234,8 +246,8 @@ header nav ul li:last-child {
 
 .ch-img-1 {
     background-image: url(../img/foto.jpg);
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 }
 
 
@@ -287,6 +299,25 @@ header nav ul li:last-child {
     font-size: 1rem;
 }
 
+/** Redes Sociales **/
+
+.socialmedia>ul li {
+    display:inline-block;
+}
+
+
+.ion-social-twitter-outline {
+    color: #55acee;
+    font-size:1.5rem;
+}
+
+.ion-social-facebook-outline {
+    color: #3b5998;
+}
+
+.ion-social-github-outline {
+    color: #dd4b39
+}
 
 /**ESTUDIOS Y CERTIFICACIONES SECTION*/
 
@@ -323,3 +354,34 @@ header nav ul li:last-child {
         width: auto;
     }
 }
+.lista1>li, .lista2>li {
+    flex: 0 0 auto;
+    display: flex;                   /* flex item is now also flex container */
+    flex-direction: row;          /* items will stack vertically */
+}
+
+.lista1 >li .item1, .lista2>li .item1{
+    flex: 0 0 30%;
+}
+
+.lista1 >li .item2, .lista2>li .item2{
+    flex: 0 0 auto;
+}
+
+.lista2>li{
+    margin-left:1.7rem;
+}
+
+time {
+    color:var(--color-decorativo);
+    font-weight: bold;
+    font-size:1.3rem;
+}
+
+.item2 h4{
+    font-weight: bold;
+    font-size:1.2rem;
+    letter-spacing: 0.1rem;
+}
+
+
