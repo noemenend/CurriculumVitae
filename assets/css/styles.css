@@ -1,6 +1,7 @@
 /*-------------
     Variables
 --------------*/
+
 :root {
     --color-texto: rgb(0, 0, 0);
     --color-decorativo: rgb(230, 162, 36);
@@ -12,285 +13,313 @@
  	General
 -------------*/
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-	font: normal 16px sans-serif;
-	color:var(--color-texto);
+body {
+    /*font: normal 16px sans-serif;
+	color:var(--color-texto);*/
+    background-color: #fff;
+    color: #555;
+    font-family: 'Quicksands', serif;
+    font-weight: 300;
+    font-size: 1rem;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
 }
 
-ul, nav{
-	list-style: none;
+ul,
+nav {
+    list-style: none;
 }
 
-a{
-	text-decoration: none;
-	color: inherit;
-	cursor: pointer;
-
-	opacity: 1;
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    opacity: 1;
 }
 
-a:hover{
+a:hover {
     color: var(--color-decorativo);
-	opacity: 2;
+    opacity: 2;
 }
 
-a.btn{
-	color: #fff;
-	border-radius: 4px;
-	text-transform: uppercase;
-	background-color: #2196F3;
-	font-weight: 800;
-	text-align: center;
+a.btn {
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: #2196F3;
+    font-weight: 800;
+    text-align: center;
 }
 
-hr{
-	width: 100%;
-	height: 2px;
-	background-color: var(--color-decorativo);
-	border: 0;
+hr {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-decorativo);
+    border: 0;
+    /*margin-bottom: 2rem;*/
+    /*margin-top: 2rem;*/
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 3rem 2.5rem;
+}
+
+@media (max-width: 1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        padding: 60px 20px;
+    }
+}
+
+section h3.section-title {
+    color: var(--color-texto);
+    text-transform: capitalize;
+    font: bold 1.8rem 'Quick Sands', sans-serif;
     margin-bottom: 2rem;
-    margin-top:2rem;
+    text-align: left;
 }
 
-section{
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-
-	padding: 3rem 2.5rem;
-
-}
-
-@media (max-width: 1000px){
-
-	section{
-		padding: 100px 50px;
-	}
-
-}
-
-@media (max-width: 600px){
-
-	section{
-		padding: 60px 20px;
-	}
-	
-
-}
-
-section h3.section-title{
-	color: var(--color-texto);
-	text-transform: capitalize; 
-	font: bold 1.8rem 'Quick Sands', sans-serif;
-	margin-bottom: 2rem;
-	text-align: center;
-}
-
-section p{
-	max-width: 800px;
-	margin-bottom: 25px;
-	padding: 0;
+section p {
+    max-width: 800px;
+    margin-bottom: 25px;
+    padding: 0;
     line-height: 1.5;
-    font-family:'Quicksands', sans-serif;
-    font-size:1rem
+    font-size: 1.2rem
 }
 
-@media (max-width: 600px){
-
-	section p{
-		font-size:12px;
-	}
-	
-
-}
 
 /*-------------
  	Header
 -------------*/
 
-header{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 10;
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	color: #fff;
-	padding: 1.5rem 100px 0;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 1.5rem 100px 0;
+    font-family: 'Roboto', sans-serif;
 }
 
-header h2{
-	font-family: 'Roboto', sans-serif;
+header h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8rem;
 }
 
-header nav ul{
-	display: flex;
+header nav ul {
+    display: flex;
 }
 
-header nav ul li{
-	margin: 0 15px;
+header nav ul li {
+    margin: 0 15px;
 }
 
-header nav ul li:first-child{
-	margin-left: 0;	
+header nav ul li:first-child {
+    margin-left: 0;
 }
 
-header nav ul li:last-child{
-	margin-right: 0;	
+header nav ul li:last-child {
+    margin-right: 0;
 }
 
-
-
-@media (max-width: 1000px){
-	header{
-		padding: 20px 50px;
-	}
-}
-
-
-@media (max-width: 700px){
-	header{
-		flex-direction: column;		
-	}
-
-	header h2{
-		margin-bottom: 15px;
+@media (max-width: 1000px) {
+    header {
+        padding: 20px 50px;
     }
-    header nav ul li{
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        margin-bottom: 15px;
+    }
+    header nav ul li {
         margin: 0 5px;
-        font-size:12px;
+        font-size: 12px;
+        font-family: 'Roboto', sans-serif;
     }
 }
+
 
 /*----------------
  	Portada Section
 ----------------*/
 
-.cabecera{
-	position: relative;
-	justify-content: center;
-	min-height: 100vh;
+.cabecera {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     text-align: center;
 }
 
-.cabecera .background-image{
+.cabecera .background-image {
     background-image: url(../img/portfolio_header.jpg);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
 }
 
-.cabecera .background-image:after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: #081f12;
-	opacity: 0.7;
+.cabecera .background-image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #081f12;
+    opacity: 0.7;
 }
 
-.cabecera h1{
-	font: bold 3rem 'Roboto', sans-serif;
+.cabecera h1 {
+    font-family: 'Roboto', sans-serif;
     color: #fff;
-    text-align: center;
+    text-align: left;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-size: 50px;
 }
 
-
-
-
-@media (max-width: 800px){
-
-	.cabecera{
-		min-height: 600px;
-	}
-
-	.cabecera h1{
-		font-size: 48px;
-	}
-
+.puesto {
+    font-weight: 10;
+    font-size: 40px;
 }
+
+@media (max-width: 800px) {
+    .cabecera {
+        min-height: 600px;
+    }
+    .cabecera h1 {
+        font-size: 48px;
+    }
+}
+
 
 /*--------------------
  	Quien Soy Section
 ---------------------*/
 
-.quien_soy{
-	background-color: #fff;
+.quien_soy {
+    background-color: #fff;
 }
 
-.quien_soy p{
+.quien_soy p {
     text-align: left;
-    
 }
 
-
-
-figure img{
-/* cambia estos dos valores para definir el tamaño de tu círculo */
-height: 190px;
-width: 200px;
-/* los siguientes valores son independientes del tamaño del círculo */
-background-repeat: no-repeat;
-background-position: 50%;
-border-radius: 50%;
-background-size: 100% auto;
-/*margin: 0 auto;*/
-display: block;
-margin-left:0rem;
+.ch-img-1 {
+    background-image: url(../img/foto.jpg);
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 
 
 /* Mostly Fluid */
+
 .container {
-  display: -ms-flex;
-	display: -webkit-flex;
-	display: flex;
-	justify-content:center;
-	align-items:center;
- /* -webkit-flex-flow: row wrap;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    /* -webkit-flex-flow: row wrap;
   flex-flow: row wrap;*/
 }
 
-
-
-.acercade, .detalles, 
+.acercade,
+.detalles,
 {
-  width: 50%;
-  padding: 10px;
+    width: 80%;
+}
+
+.ch-img-1 {
+    width: 20%;
 }
 
 .container {
-    width: 800px;
+    width: 100%;
     margin-left: 0;
     margin-right: auto;
 }
 
-@media all and (max-width: 500px) {
-    .container { 
+@media all and (max-width: 700px) {
+    .container {
         flex-direction: column;
-        -webkit-flex-direction: column; 
-		-ms-flexd-direction:column;
-		align-items:flex-start;
-		}
-	.acercade {
-		width:35%;
-	}
-}
+        -webkit-flex-direction: column;
+        -ms-flexd-direction: column;
+        align-items: flex-start;
+    }
 }
 
+.detalles h4 {
+    font-size: 1.2rem;
+    color: var(--color-decorativo);
+}
+
+.detalles p {
+    font-size: 1rem;
+}
 
 
+/**ESTUDIOS Y CERTIFICACIONES SECTION*/
+
+.estudios_certificaciones {
+    background-color: rgb(194, 187, 187, 0.2);
+}
+
+.estudios_container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.estudios_container>article {
+    width: 50%;
+}
+
+.estudios_container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media all and (max-width: 700px) {
+    .estudios_container {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flexd-direction: column;
+        align-items: flex-start;
+        width: auto;
+    }
+}
