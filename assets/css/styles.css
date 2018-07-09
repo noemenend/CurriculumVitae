@@ -161,7 +161,6 @@
         }
         
         nav.menu-top a {
-            color: #fff;
             display: block;
             padding: .5rem 1rem;
             transition: all 0.8s linear;
@@ -172,7 +171,21 @@
         }
         
         nav.menu-bottom {
-            background-color: var(--color-autores)
+            background-color: rgb(69, 87, 69);
+        }
+
+        nav.content-wrapper {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1rem;
+            margin-bottom:1rem;
+        }
+        
+        nav#bottom-menu ul li{
+            padding:1rem;
+            color:#fff;
+            text-transform: uppercase;
         }
         
         @media screen and (min-width: 900px) {
@@ -187,12 +200,14 @@
             }
             body>nav a:hover {
                 color: #fff;
-                background-color: var(--color-decorativo);
+                background-color: rgb(133, 202, 133);
                 transform: scale(1.2);
             }
-            .active {
-                color: rgb(15, 12, 12);
-            }
+            
+        }
+
+        a.active {
+            color: var(--color-decorativo);
         }
         /*----------------
  	Portada Section
