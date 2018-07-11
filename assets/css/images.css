@@ -3,8 +3,8 @@
 }
 
 .ch-item {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     position: relative;
     cursor: default;
@@ -19,8 +19,8 @@
 }
 
 .ch-info {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     position: relative;
     background-repeat: no-repeat;
     background-size: 100% 100%;

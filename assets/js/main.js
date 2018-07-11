@@ -1,20 +1,25 @@
+import { FormContact } from './form-contact.js'
 export class Main {
 
     constructor() {
         // elementos del DOM
-        this.oBtnMenu = document.querySelector('#menuBtn');
-        this.oMenuBottom= document.querySelector('#bottom-menu');
+        this.oBtnMenu = document.querySelector('#menuBtn')
+        this.oMenuBottom = document.querySelector('#bottom-menu')
 
         this.aMenu = document.querySelectorAll("nav#top-menu a")
         this.aSections = document.querySelectorAll("section")
         this.oOffsets = []
+
+        //Formulario de contacto
+
+        this.oFormContact = new FormContact()
 
         this.prepararNavegacion()
     }
 
     defineEventListeners() {
 
-        this.oBtnMenu.addEventListener('click', this.smoothScroll.bind(this));
+        this.oBtnMenu.addEventListener('click', this.smoothScroll.bind(this))
         window.addEventListener('scroll', this.changeMenuStyle.bind(this))
 
     }
@@ -72,22 +77,28 @@ export class Main {
         console.log(stopY);
         var distance = stopY > startY ? stopY - startY : startY - stopY;
         if (distance < 100) {
-            scrollTo(0, stopY); return;
+            scrollTo(0, stopY);
+            return;
         }
         var speed = Math.round(distance / 100);
         if (speed >= 20) speed = 20;
-         var step = Math.round(distance / 25);
+        var step = Math.round(distance / 25);
         var leapY = stopY > startY ? startY + step : startY - step;
         var timer = 0;
         if (stopY > startY) {
-            for ( var i=startY; i<stopY; i+=step ) {
-                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-            } return;
+            for (var i = startY; i < stopY; i += step) {
+                setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+                leapY += step;
+                if (leapY > stopY) leapY = stopY;
+                timer++;
+            }
+            return;
         }
-        for ( var i=startY; i>stopY; i-=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        for (var i = startY; i > stopY; i -= step) {
+            setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+            leapY -= step;
+            if (leapY < stopY) leapY = stopY;
+            timer++;
         }
     }
 
@@ -98,6 +109,9 @@ export class Main {
         while (node.offsetParent && node.offsetParent != document.body) {
             node = node.offsetParent;
             y += node.offsetTop;
-        } return y;
+        }
+        return y;
     }
+
+
 }
