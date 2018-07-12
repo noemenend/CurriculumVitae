@@ -18,8 +18,7 @@
         }
         
         body {
-            /*font: normal 16px sans-serif;
-	color:var(--color-texto);*/
+
             background-color: #fff;
             color: var(--color-texto);
             font-family: 'Quicksands', serif;
@@ -42,7 +41,7 @@
         }
         
         a:hover {
-            color: rgb(248, 158, 41);
+            color:var(--color-decorativo);
             opacity: 2;
         }
         
@@ -51,7 +50,7 @@
             background-color: var(--color-decorativo);
             width: 120px;
             height: 3px;
-            background-color: rgb(248, 158, 41);
+            background-color:var(--color-decorativo);
             border: 0;
             align-self: center;
             margin-bottom: 1rem;
@@ -115,9 +114,7 @@
             vertical-align: baseline;
             margin-right: 10px;
         }
-        /*-------------
- 	Header
--------------*/
+        /*-------------Header (titulo y menu)-------------*/
         
         header {
             position: absolute;
@@ -148,7 +145,7 @@
         
         nav.menu-top,
         nav.menu-icon {
-            position: absolute;
+            position: fixed;
             z-index: 1;
             right: 5%;
             top: 1rem;
@@ -156,6 +153,8 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             color: #fff;
+            background-color: rgb(69, 87, 69);
+            border-radius:2px;
         }
         
         nav.menu-top li {
@@ -199,9 +198,8 @@
             }
             nav.menu-top {
                 display: block;
-                position: fixed;
-                background-color: rgb(69, 87, 69);
             }
+
             body>nav a:hover {
                 color: #fff;
                 background-color: rgb(133, 202, 133);
@@ -210,11 +208,11 @@
         }
         
         a.active {
-            color: rgb(230, 162, 36);
+            color: var(--color-decorativo);
         }
-        /*----------------
- 	Portada Section
-----------------*/
+
+
+        /*----------------Portada Section----------------*/
         
         .cabecera {
             position: relative;
@@ -260,6 +258,23 @@
             font-size: 40px;
         }
         
+        .type {
+            font-weight: 5;
+            font-size: 30px;
+            color: var(--color-decorativo);
+        }
+        
+        span#type {
+            border-right: .05em solid;
+            animation: caret 1s steps(1) infinite;
+        }
+        
+        @keyframes caret {
+            50% {
+                border-color: transparent;
+            }
+        }
+        
         @media (max-width: 800px) {
             .cabecera {
                 min-height: 600px;
@@ -268,9 +283,9 @@
                 font-size: 48px;
             }
         }
-        /*--------------------
- 	Quien Soy Section
----------------------*/
+
+
+        /*--------------------Quien Soy Section---------------------*/
         
         .quien_soy {
             background-color: #fff;
@@ -281,7 +296,7 @@
         }
         
         .ch-img-1 {
-            background-image: url(../img/foto.jpg);
+            background-image: url(../img/foto2.jpg);
             margin-left: 2.5rem;
             margin-right: 2.5rem;
         }
@@ -331,6 +346,7 @@
         .detalles p {
             font-size: 1rem;
         }
+
         /** Redes Sociales **/
         
         .socialmedia>ul li {
@@ -354,7 +370,9 @@
             font-size: 1.7rem;
             transform: scale(1.2);
         }
-        /**ESTUDIOS Y CERTIFICACIONES SECTION*/
+
+
+        /**------------ESTUDIOS Y CERTIFICACIONES SECTION----------------*/
         
         .estudios_certificaciones {
             background-color: rgb(194, 187, 187, 0.2);
@@ -482,13 +500,16 @@
                 margin-left: 0.1rem;
             }
         }
-        /**Experiencia Profesional Seccion**/
+
+        /**-------------Experiencia Profesional Seccion---------------------**/
         
         .item2 p {
             font-size: 1rem;
             line-height: 1.2rem;
         }
-        /** SOBRE MI Seccion**/
+
+
+        /**--------------------- SOBRE MI Seccion----------------------------**/
         
         .sobre_mi {
             background-color: rgb(194, 187, 187, 0.2);
@@ -564,7 +585,9 @@
         .piePagina small {
             color: #fff;
         }
-        /** CONTACTO SECTION*/
+
+
+        /**----------------------------- CONTACTO SECTION---------------------------*/
         
         .contacto {
             background-image: url(../img/contacto.jpg);
@@ -656,7 +679,7 @@
         .boton {
             display: block;
             color: #fff;
-            background-color: rgb(248, 158, 41);
+            background-color:var(--color-decorativo);
             border: 0;
             font-size: 14px;
             font-weight: 800;
@@ -678,7 +701,7 @@
         
         #contador_palabras,
         #palabras_restantes {
-            color: rgb(248, 158, 41);
+            color: var(--color-decorativo);
         }
         
         @media all and (max-width:700px) {
@@ -701,11 +724,12 @@
             -webkit-transform: scale(1.2);
             -ms-transform: scale(1.2);
         }
+
         /**KEY FRAMES**/
         
         .cabecera>h1#tagline {
             display: inline-block;
-            color: #e67e22;
+            color: var(--color-decorativo);
             font-size: 0.1rem;
             margin-top: 1rem;
             display: inline-block;
@@ -723,44 +747,6 @@
             }
         }
         
-        @keyframes element {
-            0% {
-                transform: scale(0);
-                -webkit-transform: scale(0);
-                -ms-transform: scale(0);
-                opacity: 0;
-            }
-            20% {
-                transform: scale(2);
-                -webkit-transform: scale(2);
-                -ms-transform: scale(2);
-                opacity: 0.2;
-            }
-            40% {
-                transform: scale(4);
-                -webkit-transform: scale(4);
-                -ms-transform: scale(4);
-                opacity: 0.4;
-            }
-            60% {
-                transform: scale(6);
-                -webkit-transform: scale(6);
-                -ms-transform: scale(6);
-                opacity: 0.6;
-            }
-            80% {
-                transform: scale(8);
-                -webkit-transform: scale(8);
-                -ms-transform: scale(8);
-                opacity: 0.8;
-            }
-            100% {
-                transform: scale(10);
-                -webkit-transform: scale(10);
-                -ms-transform: scale(10);
-                opacity: 1;
-            }
-        }
         /** Capa par mostra mensajes de error*/
         
         div.alert-message {
