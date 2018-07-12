@@ -14,14 +14,13 @@ export class Main {
 
         this.oFormContact = new FormContact()
 
+        //Prepara el array de offsets usado en el smooth scrooll
         this.prepararNavegacion()
     }
 
     defineEventListeners() {
-
         this.oBtnMenu.addEventListener('click', this.smoothScroll.bind(this))
         window.addEventListener('scroll', this.changeMenuStyle.bind(this))
-
     }
 
 

@@ -7,7 +7,7 @@ export class FormContact {
         this.oSelectConocido = document.querySelector('#como-me-has-conocido')
         this.oInputPhone = document.querySelector('#telefono')
         this.oTextMessage = document.querySelector('#mensaje')
-        this.oDimeComo= document.querySelector('#dime_como_me_has_conocido')
+        this.oDimeComo = document.querySelector('#dime_como_me_has_conocido')
         this.olinkcerrar = document.querySelector('#cerrarCapa')
         this.oCajaError = document.querySelector('#capa_error')
 
@@ -27,6 +27,7 @@ export class FormContact {
         //Reseteamos los valores del formulario
         this.resetearFormulario()
 
+        //Definimos los listeners de los objetos, formulario, mensaje y select ¿Como me has conocido?
         this.oFormContact.addEventListener('submit', this.leerContacto.bind(this))
         this.oTextMessage.addEventListener('keyup', this.contarPalabras.bind(this))
         this.oSelectConocido.addEventListener(
@@ -36,30 +37,33 @@ export class FormContact {
 
     }
 
-    
+
+    //Limpia el formulario
     resetearFormulario() {
-        this.oInputName.value=""
-        this.oInputEmail.value=""
-        this.oInputPhone.value=""
-        this.oTextMessage.value=""
-        this.oDimeComo.value=""
+        this.oInputName.value = ""
+        this.oInputEmail.value = ""
+        this.oInputPhone.value = ""
+        this.oTextMessage.value = ""
+        this.oDimeComo.value = ""
 
     }
 
+    //Cuenta las palabras que se llevan introducidas del mensaje
     contarPalabras() {
         var palabras = this.oTextMessage.value.match(/\S+/g).length
-        console.log(palabras)
         this.oContadorPal.innerHTML = palabras
         this.oPalRestantes.innerHTML = 150 - palabras
     }
 
+    //Comprueba si el valor del desplegable es Otros, en ese caso se muestra el campo
+    //de texto libre Dime como me has conocido.
     comprobarValorOtros() {
-        this.oDimeComo.value=""
+        this.oDimeComo.value = ""
         if (this.oSelectConocido.value == 'Otros') {
-             if (this.oDimeComo.classList.contains('inactive')) {
-                 this.oDimeComo.classList.remove('inactive')
+            if (this.oDimeComo.classList.contains('inactive')) {
+                this.oDimeComo.classList.remove('inactive')
                 this.oDimeComo.classList.add('toogle')
-             }
+            }
         } else {
             if (this.oDimeComo.classList.contains('toogle')) {
                 this.oDimeComo.classList.remove('toogle')
@@ -68,12 +72,13 @@ export class FormContact {
         }
     }
 
-   
 
+    //Lee los datos introducidos por el usuario y los valida.
+    //Si alguno de los datos no cumple las reglas de validación muestra un mensaje de error
+    //En caso contrario se muestra un mensaje de confirmación de envio.
     leerContacto(oEvent) {
         oEvent.preventDefault()
         let validacion = this.validar()
-        console.log(validacion)
         if (validacion) {
             // Advertimos de éxito en el envío del formulario, simulando su envio.
             document.getElementById('texto_capa_error').innerText =
@@ -88,6 +93,7 @@ export class FormContact {
         }
     }
 
+    //Guarda los datos introducidos por el usuario.
     guardarDatos() {
         this.oData = {
             name: this.oInputName,
@@ -113,6 +119,7 @@ export class FormContact {
         }
     }
 
+    //Valida los campos del formulario.
     validar() {
         if (this.oInputName.checkValidity() == false) {
             document.getElementById('capa_error').style.display = 'block'
@@ -130,6 +137,19 @@ export class FormContact {
             return false
         }
 
+
+        //Si el select == Otros comprobar que rellena el campo dime_como_me_has_conocido
+
+        if (this.oDimeComo.checkValidity() == false) {
+            document.getElementById('capa_error').style.display = 'block'
+            document.getElementById('texto_capa_error').innerText =
+                'Introduce cómo me has conocido.'
+            this.oDimeComo.focus()
+            return false
+        }
+
+
+        //Chequeamos que es un numero de telefono válido.
         if (this.oInputPhone.checkValidity() == false) {
             document.getElementById('capa_error').style.display = 'block'
             document.getElementById('texto_capa_error').innerText =
@@ -138,13 +158,11 @@ export class FormContact {
             return false
         }
 
-        //Si el select == Otros comprobar que rellena el campo dime_como_me_has_conocido
-
-        if(this.oDimeComo.checkValidity() == false) {
+        if (this.oTextMessage.checkValidity() == false) {
             document.getElementById('capa_error').style.display = 'block'
             document.getElementById('texto_capa_error').innerText =
-                'Introduce cómo me has conocido.'
-            this.oDimeComo.focus()
+                'Introduce un mensaje'
+            this.oTextMessage.focus()
             return false
         }
 

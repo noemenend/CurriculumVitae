@@ -1,3 +1,5 @@
+/** -------------Ficheros de estilos para las imágenes---------------------*/
+
 :root {
     --color-decorativo: rgb(236, 186, 93);
 }
@@ -72,7 +74,6 @@
     opacity: 1;
 }
 
-
 .ch-info p {
     color: #fff;
     padding: 10px 5px;
@@ -115,7 +116,3 @@ ch-info p {
     padding-top: 4px;
     font-family: 'Open Sans', Arial, sans-serif;
 }
-
-
-
-
