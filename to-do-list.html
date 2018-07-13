@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listado de Tareas</title>
+
+    <!-- Hoja de estilos-->
+    <link rel="stylesheet" href="./assets/css/styles-todo.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Markazi+Text:600|Roboto" rel="stylesheet">
+
+    <!--Javascript que simula una rest api ajax-->
+    <script src="./assets/js/to-do/index.js"></script>
+
+</head>
+<body>
+    <div class="container">
+			
+        <h1 id="title">Listado de Tareas</h1>
+        
+        <p id="notice" class="hidden">No tienes tareas pendientes</p>
+        
+        <ul id="lista">
+           
+        </ul>
+        
+        <form id="addTask" validate>
+        <textarea id="task-input" name="description" rows="1" placeholder="Añade una nueva tarea aquí" required></textarea>
+        </form>
+        
+        <button type="submit" id="add">Añadir Tarea</button>
+    
+    </div><!-- .container -->
+    
+    <p role="contentinfo">Realizado <span>por</span> Noelia Muñiz Menéndez</p>
+</body>
+</html>
+
+
+
