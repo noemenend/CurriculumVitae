@@ -45,13 +45,21 @@ h1 {
 	font-size: 25px;
 }
 
+
 .hidden {
 	display: none;
+	background-color: #f8f8f8;
+}
+
+.error {
+	padding: 10px;
+	margin: 15px;
+	background-color: rgb(235, 121, 121);
+	border: 1px solid #ddd;
 }
 #notice {
 	padding: 10px;
 	margin: 15px;
-	background-color: #f8f8f8;
 	border: 1px solid #ddd;
 }
 
@@ -68,6 +76,7 @@ li {
 	border-bottom: 1px solid #ddd;
 	
 	position: relative;
+	height: 40px;
 }
 
 li:before {
@@ -152,6 +161,19 @@ a:hover {
 	color: #555;
 }
 
+.home {
+	color:rgb(230, 162, 36);
+	text-decoration:none;
+	font-size:15px;
+	margin-left:10rem;
+	text-align: end;
+}
+
+a.home:hover {
+	color:rgb(230, 162, 36);
+	opacity: 0.5;
+}
+
 
 
 /*
@@ -170,4 +192,6 @@ a:hover {
 	textarea {
 		width: 348px;
 	}
+
+	
 }

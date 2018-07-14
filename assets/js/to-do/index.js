@@ -31,6 +31,7 @@ function app() {
 
 
 
+
     function getDatos() {
         let url = 'http://localhost:3000/tareas'
         fetch(url)
@@ -48,24 +49,6 @@ function app() {
             })
     }
 
-    function getDatosItem(id) {
-        let url = 'http://localhost:3000/tareas/'+id
-        fetch(url)
-            .then((response) => {
-                if (response.status === 200) {
-                    return response.json()
-                } else {
-                    return new Promise((resolve, reject) => {
-                        resolve('Error de conexion ' + response.status)
-                    })
-                }
-            })
-            .then(data => {
-                console.log(data)
-                return data
-            })
-    }
-
 
     function mostrarDatos(data) {
         let lista = document.getElementById('lista')
@@ -73,12 +56,14 @@ function app() {
         let listado = ""
 
         if (data.length>0) {
+            document.getElementById('notice').classList.remove('error')
             document.getElementById('notice').classList.add('hidden')
             data.forEach(element => {
                 listado += '<li>' + element.descripcion + '<button id="' + element.id + '" class="delete">Delete</button></li>'
             });
         } else {
             document.getElementById('notice').classList.remove('hidden')
+            lista.innerHTML= "No tienes tareas pendientes"
         }
 
         lista.innerHTML = listado
@@ -91,11 +76,13 @@ function app() {
 
 
     }
-    function postDatos() {
+    function postDatos(ev) {
+        ev.preventDefault()
+        if (validar()) {
         let tamaño = document.getElementsByClassName('delete').length
         let idLastItem=1;
         if (tamaño>=1) {
-        idLastItem = document.getElementsByClassName('delete').item(tamaño-1).id +1
+        idLastItem = Number(document.getElementsByClassName('delete').item(tamaño-1).id) +1
         }
  
         let desc = document.querySelector('#task-input').value
@@ -115,7 +102,20 @@ function app() {
                 console.log(data)
                 getDatos()
             })
+        }
+    }
 
+    function validar() {
+        if (document.querySelector('#task-input').checkValidity() == false) {
+            console.log('me valida????')
+            let notice = document.getElementById('notice')
+            notice.innerHTML="Por favor, introduce una tarea."
+            notice.classList.remove('hidden')
+            notice.classList.add('error')
+            notice.focus()
+            return false
+        }
+        return true;
     }
 
     function deleteDatos(ev) {
@@ -138,40 +138,7 @@ function app() {
             })
     }
 
-    /*function putDatos() {
-        let data = {
-            title: "Alicia en el País de las Maravillas",
-            author: "Lewis Carroll"}  
-        let options = {
-            method : 'PUT',
-            headers: HEADERS,
-            body : JSON.stringify(data)}
-        let item = document.querySelector('#itemM').value
-        if (item) {
-            url = 'http://localhost:3000/posts/'+item
-        } else {
-            return
-        }
-        fetch(url, options)
-        .then( response => response.json() )
-        .then( data => console.log(data) )
-    }
 
-    function deleteDatos() {
-        let options = {
-            method : 'DELETE',
-            headers: HEADERS}
-        let item = document.querySelector('#itemB').value
-        if (item) {
-            url = 'http://localhost:3000/posts/'+item
-        } else {
-            return
-        }
-        fetch(url, options)
-        .then( response => response.json() )
-        .then( data => console.log(data) )
-    }
-}*/
 
 
 }
