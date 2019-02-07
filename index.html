@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Portfolio Noelia Muñiz Menéndez</title>
+    <title>Curriculum Vitae - Senior Java Developer, Noelia Menendez</title>
 
-    <!--Hojas de estilo-->
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <link rel="stylesheet" href="./assets/css/images.css">
+    <meta name="author" content="Noelia Muñiz Menéndez">
+    <meta name="description" content="Noelia Muñiz Menéndez portfolio, Senior programmer focused on Java J2EE and Web development">
+   
+    <link rel="canonical" href="https://noemenend.github.io/CurriculumVitae/">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Noemunizmenen">
+    <meta name="twitter:title" content="Curriculum Vitae - Senior Java Developer, Noelia Menendez">
+    <meta name="twitter:description" content="Noelia Muñiz Menéndez portfolio, Senior programmer focused on Java J2EE and Web development">
+    <meta name="twitter:creator" content="@Noemunizmenen">
+    <meta name="twitter:image" content="https://mmartinortu.github.io/CurriculumVitae/assets/Senior-Java Developer-Noelia.jpg">
+
+    <!-- Open ghrap -->
+    <meta property="og:title" content="Curriculum Vitae - Senior Java Developer, Noelia Menendez">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://noemenend.github.io/CurriculumVitae/">
+    <meta property="og:image" content="https://mmartinortu.github.io/CurriculumVitae/assets/Senior-Java-Developer-Noelia.jpg">
+    <meta property="og:description" content="Noelia Muñiz Menéndez portfolio, Senior programmer focused on Java J2EE and Web development">
+    <meta property="og:site_name" content="Curriculum Vitae - Senior Java Developer, Noelia Menendez">
+
 
     <!--Fuentes de Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
@@ -19,19 +36,19 @@
     <!--Iconos de Fontawesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
 
+    <!--Hojas de estilo-->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/images.css">
+
     <!--Otros iconos-->
     <link rel="stylesheet" href="./vendors/css/ionicons.min.css">
-
-
-    <!-- Javascript-->
-    <script src="./assets/js/index.js" type="module"></script>
-    <script src="./assets/js/type.js"></script>
 
 </head>
 
 <body>
     <header>
-        <h2>Currículum Vitae</h2>
+        <h1>Currículum Vitae</h1>
     </header>
 
     <nav class="menu-icon">
@@ -45,22 +62,22 @@
     <nav id="top-menu" class="menu-top">
         <ul>
             <li>
-                <a id="lportada" href="#">Portada</a>
+                <a id="lportada" href="#portada">Portada</a>
             </li>
             <li>
-                <a id="lquiensoy" href="#">Quién Soy</a>
+                <a id="lquiensoy" href="#quiensoy">Quién Soy</a>
             </li>
             <li>
-                <a id="lestudios" href="#">Estudios</a>
+                <a id="lestudios" href="#estudios">Estudios</a>
             </li>
             <li>
-                <a id ="lexperiencia" href="#">Experiencia</a>
+                <a id ="lexperiencia" href="#experiencia">Experiencia</a>
             </li>
             <li>
-                <a id="lsobremi" href="#">Sobre mí</a>
+                <a id="lsobremi" href="#sobremi">Sobre mí</a>
             </li>
             <li>
-                <a id="lcontacto" href="#">Contacto</a>
+                <a id="lcontacto" href="#contacto">Contacto</a>
             </li>
         </ul>
     </nav>
@@ -68,12 +85,12 @@
 
     <section id="portada" class="cabecera">
         <div class="background-image"></div>
-        <h1>Noelia Muñiz Menéndez
+        <h2>Noelia Muñiz Menéndez
             <br>
             <span class="puesto">Full Stack Web Developer / Java Developer</span>
             <br>
             <span id="type" class="type"></span>
-        </h1>
+        </h2>
 
     </section>
 
@@ -465,6 +482,11 @@
         </p>
 
     </footer>
+
+    <!-- Javascript-->
+    <script src="./assets/js/index.js" type="module"></script>
+    <script src="./assets/js/type.js"></script>
+
 </body>
 
 </html>
