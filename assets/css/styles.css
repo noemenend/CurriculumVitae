@@ -79,7 +79,7 @@
             }
         }
         
-        section h3.section-title {
+        .section-title {
             color: var(--color-texto);
             text-transform: none;
             font: bold 1.8rem 'Quick Sands', sans-serif;
