@@ -79,7 +79,7 @@
             }
         }
         
-        section h3.section-title, header .section-title {
+        section h3.section-title, #quiensoy header h3.section-title {
             color: var(--color-texto);
             text-transform: none;
             font: bold 1.8rem 'Quick Sands', sans-serif;
