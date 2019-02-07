@@ -48,7 +48,7 @@
 
 <body>
     <header>
-        <h1>Currículum Vitae</h1>
+        <h2>Currículum Vitae</h2>
     </header>
 
     <nav class="menu-icon">
@@ -85,25 +85,28 @@
 
     <section id="portada" class="cabecera">
         <div class="background-image"></div>
-        <h2>Noelia Muñiz Menéndez
+        <h1>Noelia Muñiz Menéndez
             <br>
             <span class="puesto">Full Stack Web Developer / Java Developer</span>
             <br>
             <span id="type" class="type"></span>
-        </h2>
+        </h1>
 
     </section>
 
     <!-- Quien Soy -->
 
     <section id="quiensoy" class="quien_soy">
+        <header>
         <h3 class="section-title">Quién Soy</h3>
+        </header>
         <hr>
+        <article>
         <div class="container">
-            <div class="acercade">
-                <p>Java Senior Developer con más de 15 años de experiencia trabajando en el mundo IT. Amplia experiencia laboral en el desarrollo de aplicacines web J2EE con frameworks como Spring/Struts/Hibernate, aunque ahora mismo proporciono servicios
+            <div class="acercade"  itemprop="description">
+                <p><span itemprop="jobTitle" class="textoResaltado">Java Senior Developer </span> con más de 15 años de experiencia trabajando en el mundo IT. Amplia experiencia laboral en el desarrollo de aplicacines web J2EE con frameworks como Spring/Struts/Hibernate, aunque ahora mismo proporciono servicios
                     de soporte de aplicaciones al sector farmacéutico para diferentes clientes.</p>
-                <p>Mi pasión siempre ha sido del desarrollo de Software y actualmente estoy relaizando el Bootcamp para Desarrolladores Web Full-Stack impartido por
+                <p>Mi pasión siempre ha sido del desarrollo de Software y actualmente estoy realizando el Bootcamp para Desarrolladores Web Full-Stack impartido por
                     <span class="textoResaltado">Keepcoding</span> para reciclarme y mejorar mi perfil profesional. Con este curso espero dar un giro a mi carrera profesional</p>
                 <p>Dejando de lado mis intereses técnicos, los principios profesionales que trato de mantener todos los días son: la mejora continua, la organización personal y el trabajo duro. Solo siguiendo estos principios es posible alcanzar cualquier
                     hito profesional.
@@ -113,7 +116,7 @@
 
             <div class="ch-item ch-img-1">
                 <div class="ch-info">
-                    <h3>Noelia Muñiz Menéndez</h3>
+                    <h4>Noelia Muñiz Menéndez</h4>
                     <p>Full Stack Web / Java Developer </p>
                 </div>
             </div>
@@ -159,6 +162,7 @@
             </div>
 
         </div>
+        </article>
 
     </section>
 
@@ -346,10 +350,8 @@
             </li>
             <li>
                 <p>Y aquí os dejo un video para terminar ... </p>
-                <figure class="video">
-
-                    <iframe width="auto" height="200" src="https://www.youtube.com/embed/gIWYgon1yik" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
+                <figure class="video" itemscope="" itemtype="http://schema.org/Movie">
+                    <iframe alt="Asturias Paraiso Natural" width="auto" height="200" src="https://www.youtube.com/embed/gIWYgon1yik" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </figure>
 
             </li>
