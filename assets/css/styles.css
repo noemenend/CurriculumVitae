@@ -116,7 +116,7 @@
         }
         /*-------------Header (titulo y menu)-------------*/
         
-        header {
+        header .principal{
             position: absolute;
             top: 0;
             left: 0;
@@ -128,7 +128,7 @@
             font-family: 'Roboto', sans-serif;
         }
         
-        header h2 {
+        header .principal h2 {
             font-family: 'Roboto', sans-serif;
             font-size: 1.8rem;
         }
