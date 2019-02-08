@@ -87,6 +87,7 @@ export class FormContact {
             this.borracapa('capa_error', 'error')
             oEvent.preventDefault()
             this.guardarDatos()
+            this.resetearFormulario()
         } else {
             this.borracapa('capa_error', 'success')
             this.aniadecapa('capa_error', 'error')

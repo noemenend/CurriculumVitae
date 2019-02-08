@@ -223,12 +223,12 @@
         }
         
         .cabecera .background-image {
-            background-image: url(../img/curriculumvitae_header.jpg);
+            /*background-image: url(../img/curriculumvitae_header.jpg);*/
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            /*width: 100%;
+            height: 100%;*/
             background-size: cover;
             z-index: -1;
         }
