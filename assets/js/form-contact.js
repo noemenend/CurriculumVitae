@@ -81,13 +81,15 @@ export class FormContact {
         let validacion = this.validar()
         if (validacion) {
             // Advertimos de éxito en el envío del formulario, simulando su envio.
-            document.getElementById('texto_capa_error').innerText =
-                'Formulario enviado con éxito'
-            this.aniadecapa('capa_error', 'success')
-            this.borracapa('capa_error', 'error')
+            
+            
             oEvent.preventDefault()
             this.guardarDatos()
-            this.resetearFormulario()
+            document.getElementById('texto_capa_error').innerText =
+            'Formulario enviado con éxito'
+            this.aniadecapa('capa_error', 'success')
+            this.borracapa('capa_error', 'error')
+           this.resetearFormulario()
         } else {
             this.borracapa('capa_error', 'success')
             this.aniadecapa('capa_error', 'error')
